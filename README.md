@@ -61,7 +61,7 @@ interface ContatoService {
 ## Pacotes
 > Pacotes
 ```
-**package br.com.kumabe.helloworld.models**
+package br.com.kumabe.helloworld.models
 
 import java.time.LocalDate
 
