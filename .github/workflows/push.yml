@@ -8,7 +8,7 @@ jobs:
     with:
       runs-on: "ubuntu-latest"
       environment: "production"
-      working-directory: "app"
+      working-directory: "HelloWorld"
       shell: "bash"
       project-name: "HelloWorld"
       java-distribution: "zulu"
@@ -23,7 +23,7 @@ jobs:
     with:
       runs-on: "ubuntu-latest"
       environment: "production"
-      working-directory: "app"
+      working-directory: "HelloWorld"
       shell: "bash"    
       project-name: "HelloWorld"
     secrets: inherit
@@ -35,7 +35,7 @@ jobs:
     with:
       runs-on: "ubuntu-latest"
       environment: "production"
-      working-directory: "app"
+      working-directory: "HelloWorld"
       shell: "bash"    
       project-name: "HelloWorld"
       languages: "java"
