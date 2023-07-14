@@ -15,28 +15,3 @@ jobs:
       java-version: "11"
       gradle-version: "7.6.1"
     secrets: inherit
-
-  call-workflow-sonarqube:
-    needs:
-      - call-workflow-ci-java-gradle
-    uses: kumabes-org/reusable-workflows-sonarqube/.github/workflows/main.yml@main
-    with:
-      runs-on: "ubuntu-latest"
-      environment: "production"
-      working-directory: "HelloWorld"
-      shell: "bash"    
-      project-name: "HelloWorld"
-    secrets: inherit
-
-  call-workflow-codeql:
-    needs:
-      - call-workflow-ci-java-gradle
-    uses: kumabes-org/reusable-workflows-codeql/.github/workflows/main.yml@main
-    with:
-      runs-on: "ubuntu-latest"
-      environment: "production"
-      working-directory: "HelloWorld"
-      shell: "bash"    
-      project-name: "HelloWorld"
-      languages: "java"
-    secrets: inherit
